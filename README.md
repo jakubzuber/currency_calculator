@@ -10,7 +10,7 @@ User can check the value in other currency.
 2. Provide value that you want to count from.
 3. Select one of thee currencies that are available to which you want to check value.
 
-* calculator is automatically send don't need to press any button.
+* the calculator is automatic
 ## Demo
 
 https://jakubzuber.github.io/currency_calculator/
