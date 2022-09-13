@@ -10,6 +10,8 @@ User can check the value in other currency.
 2. Provide value that you want to count from.
 3. Select one of thee currencies that are available to which you want to check value.
 
+![alt text for screen readers](/pic/mardkdown_screenshot.png "Screen shot of currency calculator").
+
 * the calculator is automatic
 ## Demo
 
