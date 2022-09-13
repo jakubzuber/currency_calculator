@@ -3,6 +3,7 @@
     const gbp = 5.4185;
     const pln = 1;
     const hkd = 0.5937;
+    
 
     const amountFunction = () => {
         const currencyInputElement = document.querySelector(".js-currencyInput");
@@ -44,5 +45,6 @@
         const formElement = document.querySelector(".js-form");
         formElement.addEventListener("input", updateRestultText)  
     }
-    init()
+    
+     init()
 }

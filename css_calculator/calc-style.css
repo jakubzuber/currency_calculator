@@ -59,8 +59,9 @@ body {
 }
 
 .form__result {
-  text-decoration: underline solid rgb(54, 22, 179);
+  text-decoration: underline 4px solid rgb(16, 9, 44);
   font-size: 25px;
+  color: rgb(65, 213, 60);
 }
 
 .form__addnotation {
