@@ -11,7 +11,7 @@
             case "eur":
                 return +amountElement.value * eur;
             case "gbp":
-               return +amountElement.value * gbp;
+                return +amountElement.value * gbp;
             case "hkd":
                 return +amountElement.value * hkd;
             case "pln":
