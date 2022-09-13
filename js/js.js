@@ -1,42 +1,48 @@
-let formElement = document.querySelector(".js-form")
-let currencyInputElement = document.querySelector(".js-currencyInput");
-let amountElement = document.querySelector(".js-amount");
-let currencyOutputElement = document.querySelector(".js-currencyOutput");
-let resultElement = document.querySelector(".js-result");
+{   
+    const eur = 4.7098;
+    const gbp = 5.4185;
+    const pln = 1;
+    const hkd = 0.5937;
 
-let eur = 4.7098;
-let gbp = 5.4185;
-let pln = 1;
-let hkd = 0.5937;
+    const amountFunction = () => {
+        const currencyInputElement = document.querySelector(".js-currencyInput");
+        const amountElement = document.querySelector(".js-amount");
+        switch (currencyInputElement.value) {
+            case "eur":
+                return +amountElement.value * eur;
+            case "gbp":
+               return +amountElement.value * gbp;
+            case "hkd":
+                return +amountElement.value * hkd;
+            case "pln":
+                return +amountElement.value * pln;
+        }
+    };
 
-formElement.addEventListener("input", () => {
-    let currencyIn = currencyInputElement.value;
-    let amountIn = amountElement.value;
-    let currencyOut = currencyOutputElement.value;
-  
-    /*converting input values into PLN*/
+    const resultFunction = () => {
+        const currencyOutputElement = document.querySelector(".js-currencyOutput");
+        let amount = amountFunction();
+        switch(currencyOutputElement.value) {
+            case "eur":
+                return amount / eur;
+            case "gbp":
+                return amount / gbp;
+            case "hkd":
+                return amount / hkd;
+            case "pln":
+                return amount / pln;
+        }
+    };
 
-    if (currencyIn === "eur") {
-        amount = amountIn * eur;
-    } else if (currencyIn === "gbp") {
-        amount = amountIn * gbp;
-    } else if (currencyIn === "hkd") {
-        amount = amountIn * hkd;
-    } else if (currencyIn === "pln") {
-        amount = amountIn * pln;
+    const updateRestultText = () => {
+        const resultElement = document.querySelector(".js-result");
+        let result = resultFunction();
+        resultElement.innerText = result.toFixed(2);
     }
 
-    /*converting from PLN to other currency*/
-
-    if (currencyOut === "eur") {
-        result = amount / eur;
-    } else if (currencyOut === "gbp") {
-        result = amount / gbp;
-    } else if (currencyOut === "hkd") {
-        result = amount / hkd;
-    } else if (currencyOut === "pln") {
-        result = amount / pln;
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+        formElement.addEventListener("input", updateRestultText)  
     }
-
-    resultElement.innerText = result.toFixed(2);
-});
+    init()
+}
