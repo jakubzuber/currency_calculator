@@ -44,9 +44,9 @@
         }
     }
 
-    const init = () => {
+    const onInit = () => {
         const formElement = document.querySelector(".js-form");
         formElement.addEventListener("input", updateRestultText)  
     }
-     init()
+     onInit()
 }
