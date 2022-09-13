@@ -38,13 +38,15 @@
     const updateRestultText = () => {
         const resultElement = document.querySelector(".js-result");
         let result = resultFunction();
-        resultElement.innerText = result.toFixed(2);
+        if (result > 0) {resultElement.innerText = result.toFixed(2);
+        } else {
+            resultElement.innerText = "Provide positive number"
+        }
     }
 
     const init = () => {
         const formElement = document.querySelector(".js-form");
         formElement.addEventListener("input", updateRestultText)  
     }
-    
      init()
 }

@@ -18,38 +18,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="body">
     <form class="form js-form">
         <fieldset class="form__fieldset">
-            <legend class="form__title">Kalkulator walutowy</legend>
+            <legend class="form__title">Currency Calculator</legend>
             <p>
                 <label>
-                    <span class="form__labelText">Przewalutowanie z</span>
+                    <span class="form__labelText">Conversion from:</span>
                     <select name="currencyInput" required class="js-currencyInput form__field">
-                        <option selected value="pln">PLN - złoty</option>
-                        <option value="eur">EUR - euro</option>
-                        <option value="gbp">GBP - funt szterling</option>
-                        <option value="hkd">HKD - dolar Hongkongu</option>
+                        <option selected value="pln">PLN</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="hkd">HKD</option>
                     </select>
                 </label>
             </p>
             <p>
                 <label>
-                    <span class="form__labelText">Kwota:*</span><input type="number" name="value" class="js-amount form__field" required step="1" min="10" autofocus placeholder="Wpisz kwotę">
+                    <span class="form__labelText">Amount:*</span><input type="number" name="value" class="js-amount form__field" required step="1" min="10" autofocus placeholder="Provide amount">
                 </label>
             <p>
-                <label><span class="form__labelText">Przewalutowanie na:</span>
+                <label><span class="form__labelText">Conversion to:</span>
                     <select name="value" required class="js-currencyOutput form__field">
-                        <option value="pln" selected>PLN - złoty</option>
-                        <option value="eur">EUR - euro</option>
-                        <option value="gbp">GBP - funt szterling</option>
-                        <option value="hkd">HKD - dolar Hongkongu</option>
+                        <option value="pln" selected>PLN</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="hkd">HKD</option>
                     </select>
                 </label>
             </p>
-            <p><span class="form__labelText">Przewalutowana kwota:</span><strong class="js-result form__result">N/A</strong></p>
-            <p class="form__addnotation">Kurs z dnia 9.09.2022</p>
-            <p class="form__addnotation">*wymagane pola</p>
+            <p><span class="form__labelText">Converted amount:</span><strong class="js-result form__result">N/A</strong></p>
+            <p class="form__annotation">Course from 9.09.2022</p>
+            <p class="form__annotation">*required fields</p>
         </fieldset>
     </form>
 </body>
