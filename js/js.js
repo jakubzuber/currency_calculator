@@ -45,8 +45,13 @@
     }
 
     const onInit = () => {
+        
         const formElement = document.querySelector(".js-form");
-        formElement.addEventListener("input", updateRestultText)  
+        formElement.addEventListener("input", (event) => {
+            event.preventDefault();
+            updateRestultText();
+        });
     }
+    
      onInit()
 }
